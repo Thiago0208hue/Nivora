@@ -1,7 +1,0 @@
-[
-  {"area":"matematica","nome":"Matemática","assuntos":["Porcentagem","Razão e proporção","Regra de três","Funções","Geometria plana","Geometria espacial","Estatística","Probabilidade","Matemática financeira"]},
-  {"area":"natureza","nome":"Ciências da Natureza","assuntos":["Ecologia","Genética","Citologia","Mecânica","Eletricidade","Química orgânica","Estequiometria"]},
-  {"area":"linguagens","nome":"Linguagens","assuntos":["Interpretação de texto","Figuras de linguagem","Funções da linguagem","Gêneros textuais","Literatura brasileira"]},
-  {"area":"humanas","nome":"Ciências Humanas","assuntos":["Revolução Industrial","Geopolítica","Cidadania e direitos","Cultura e sociedade","Formação do território brasileiro"]},
-  {"area":"redacao","nome":"Redação","assuntos":["Estrutura dissertativa-argumentativa","Coesão e coerência","Proposta de intervenção"]}
-]
