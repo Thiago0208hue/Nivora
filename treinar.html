@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treinar — Nivora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Nivora</a>
+    <nav class="main-nav app-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="plano.html">Meu Plano</a>
+      <a href="assuntos.html">Assuntos</a>
+      <a href="treinar.html">Treinar</a>
+      <a href="desempenho.html">Desempenho</a>
+      <a href="redacao.html">Redação</a>
+      <a href="metas.html">Metas</a>
+      <a href="configuracoes.html">Configurações</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Alternar tema claro/escuro">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="container page" id="treinarApp">
+  <h1 class="section-title">Treinar</h1>
+
+  <div class="filtros" id="filtros">
+    <select id="filtroArea">
+      <option value="">Todas as áreas</option>
+      <option value="matematica">Matemática</option>
+      <option value="natureza">Ciências da Natureza</option>
+      <option value="linguagens">Linguagens</option>
+      <option value="humanas">Ciências Humanas</option>
+    </select>
+    <select id="filtroMateria">
+      <option value="">Todas as matérias</option>
+    </select>
+    <select id="filtroAssunto">
+      <option value="">Todos os assuntos</option>
+    </select>
+    <select id="filtroDificuldade">
+      <option value="">Qualquer dificuldade</option>
+      <option value="Fácil">Fácil</option>
+      <option value="Médio">Médio</option>
+      <option value="Difícil">Difícil</option>
+    </select>
+    <select id="filtroAno" style="display:none">
+      <option value="">Qualquer ano</option>
+    </select>
+    <select id="filtroQuantidade">
+      <option value="5">5 questões</option>
+      <option value="10">10 questões</option>
+      <option value="999">Todas</option>
+    </select>
+    <button class="btn btn-primary" id="btnComecar">Começar</button>
+  </div>
+
+  <div id="quizArea"></div>
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html"><span>🏠</span>Dashboard</a>
+  <a href="plano.html"><span>🗓️</span>Plano</a>
+  <a href="assuntos.html"><span>📚</span>Assuntos</a>
+  <a href="treinar.html" class="active"><span>✍️</span>Treinar</a>
+  <a href="desempenho.html"><span>📊</span>Desempenho</a>
+  <a href="redacao.html"><span>📝</span>Redação</a>
+  <a href="metas.html"><span>🎯</span>Metas</a>
+  <a href="configuracoes.html"><span>⚙️</span>Config</a>
+</nav>
+
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/gamificacao.js"></script>
+<script src="js/treinar.js"></script>
+</body>
+</html>

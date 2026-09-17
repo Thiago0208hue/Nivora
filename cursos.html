@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos — Nivora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Nivora</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#como-funciona">Como funciona</a>
+      <a href="cursos.html">Cursos</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Alternar tema claro/escuro">🌙</button>
+      <a href="onboarding.html" class="btn btn-primary btn-sm">Montar meu plano</a>
+      <button id="menuToggle" class="icon-btn nav-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container page">
+  <h1 class="section-title">Explore os cursos</h1>
+  <p class="hint">Cada curso tem prioridades de estudo diferentes. Escolha o seu para montar um plano sob medida.</p>
+  <input type="text" class="search-input" id="buscaCurso" placeholder="Pesquisar curso...">
+  <div class="curso-grid" id="grid"></div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  (async function () {
+    await NivoraData.carregar();
+    const grid = document.getElementById('grid');
+    function render(itens) {
+      grid.innerHTML = itens.map(c => {
+        const areas = Object.entries(c.pesos).sort((a, b) => b[1] - a[1]).slice(0, 2)
+          .map(([k]) => ({matematica:'Matemática',natureza:'Natureza',redacao:'Redação',linguagens:'Linguagens',humanas:'Humanas'}[k]));
+        return `<div class="curso-card">
+          <h3>${c.nome}</h3>
+          <p class="hint">Prioridades: ${areas.join(' e ')}</p>
+          <a href="onboarding.html" class="btn btn-outline btn-sm">Montar plano para este curso</a>
+        </div>`;
+      }).join('');
+    }
+    render(NivoraData.cursos);
+    document.getElementById('buscaCurso').addEventListener('input', e => {
+      const termo = e.target.value.toLowerCase();
+      render(NivoraData.cursos.filter(c => c.nome.toLowerCase().includes(termo)));
+    });
+  })();
+</script>
+</body>
+</html>
