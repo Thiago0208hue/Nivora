@@ -1,0 +1,12 @@
+[
+  {"id":"ufrn","nome":"UFRN"},
+  {"id":"ifrn","nome":"IFRN"},
+  {"id":"ufpe","nome":"UFPE"},
+  {"id":"ufpb","nome":"UFPB"},
+  {"id":"ufc","nome":"UFC"},
+  {"id":"ufba","nome":"UFBA"},
+  {"id":"usp","nome":"USP"},
+  {"id":"unicamp","nome":"UNICAMP"},
+  {"id":"ufrj","nome":"UFRJ"},
+  {"id":"outras","nome":"Outras"}
+]

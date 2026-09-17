@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minhas Metas — Nivora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Nivora</a>
+    <nav class="main-nav app-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="plano.html">Meu Plano</a>
+      <a href="assuntos.html">Assuntos</a>
+      <a href="treinar.html">Treinar</a>
+      <a href="desempenho.html">Desempenho</a>
+      <a href="redacao.html">Redação</a>
+      <a href="metas.html">Metas</a>
+      <a href="configuracoes.html">Configurações</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Alternar tema claro/escuro">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="container page">
+  <h1 class="section-title">Minhas Metas</h1>
+
+  <div class="metas-sugestoes" id="metasSugestoes"></div>
+
+  <h2 class="section-title" style="margin-top:36px;">Meta personalizada</h2>
+  <div class="filtros">
+    <input type="text" id="novaMetaTexto" class="search-input" placeholder="Ex: Revisar geometria" style="margin:0;flex:1;">
+    <input type="number" id="novaMetaAlvo" class="search-input" placeholder="Alvo (ex: 10)" style="margin:0;width:140px;" min="1">
+    <button class="btn btn-primary" id="btnAddMeta">Adicionar</button>
+  </div>
+
+  <div class="metas-lista" id="metasLista"></div>
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html"><span>🏠</span>Dashboard</a>
+  <a href="plano.html"><span>🗓️</span>Plano</a>
+  <a href="assuntos.html"><span>📚</span>Assuntos</a>
+  <a href="treinar.html"><span>✍️</span>Treinar</a>
+  <a href="desempenho.html"><span>📊</span>Desempenho</a>
+  <a href="redacao.html"><span>📝</span>Redação</a>
+  <a href="metas.html" class="active"><span>🎯</span>Metas</a>
+</nav>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/gamificacao.js"></script>
+<script src="js/metas.js"></script>
+</body>
+</html>
